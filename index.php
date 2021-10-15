@@ -4,12 +4,11 @@
 	<title>Create</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/backgound.css">
 </head>
 <body>
 	<div class="container">
-		<form action="php/create.php"  style="background-color:white;    border-radius: 21px;
-           border: 3px solid #3d5d91;"
+		<form action="php/create.php"  style="background-color: #080202a1;;color: #fff;font-size: 20px;border: 3px solid #3d5d91;"
 		      method="post">
             
 		   <h4 class="display-4 text-center">Cadastrar Empresa</h4><hr><br>
@@ -74,10 +73,13 @@
 		   </div>
 		   <button type="submit" 
 		          class="btn btn-primary"
-		          name="create">Cria empresa</button>
+		          name="create">Criar</button>
 
-		         <a class="link-primary" href="php/registro.colaborador/index.php" class="link-primary">Cadastrar Colaborador</a>
-				<a class="link-primary" href="read.php" class="link-secundary">Ver cadastros</a>
+		         <a class="link-primary" href="php/registro.colaborador/index.php" 
+				 style="padding: 8px;background: #007bff;font-size: 15px;color: #fff;border-radius: 4px;margin: 13px 7px;">Cadastrar Colaborador</a>
+
+				<a class="link-primary" href="read.php" 
+				style="padding: 8px;background: #007bff;font-size: 15px;color: #fff;border-radius: 4px;margin: 13px 7px;">Ver cadastros</a>
 				
 	    </form>
 	

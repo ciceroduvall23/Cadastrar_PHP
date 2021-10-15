@@ -4,11 +4,11 @@
 	<title>Create</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/style.css">
-	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/backgound.css">
 </head>
 <body>
 	<div class="container">
-		<form action="create.php" style="background-color:white;"
+		<form action="create.php" style="background-color: #080202a1;color: #fff;font-size: 20px;"
 		      method="post">
             
 		   <h4 class="display-4 text-center">Cadastrar Colaborador</h4><hr><br>
@@ -56,15 +56,18 @@
 		           name="nascimento" 
 		           value="<?php if(isset($_GET['nascimento']))
 		                           echo($_GET['nascimento']); ?>"
-		           placeholder="Digite a sua Data de Nascimento">
+		           placeholder="Digite a sua data de nascimento">
 		   </div>
 		 
 		   <button type="submit" 
 		          class="btn btn-primary"
 		          name="create">Cadastrar</button>
 
-				<a class="link-primary" href="../../index.php">Registrar Empresa</a>
-			   <a class="link-primary" href="registros.php">Ver cadastros</a>
+				<a style="padding: 8px;background: #007bff;font-size: 15px;color: #fff;border-radius: 4px;margin: 13px 7px;"
+				 href="../../index.php">Registrar Empresa</a>
+
+			   <a style="padding: 8px;background: #007bff;font-size: 15px;color: #fff;border-radius: 4px;margin: 13px 7px;"
+			    href="registros.php">Ver cadastros</a>
 
 	    </form>
 	</div>

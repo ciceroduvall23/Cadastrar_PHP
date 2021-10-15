@@ -34,9 +34,9 @@ if (isset($_POST['create'])) {
                VALUES('$name', '$email',  '$telefone', '$nascimento')";
        $result = mysqli_query($conn, $sql);
        if ($result) {
-       	  header("Location: registros.php?success=successfully created");
+       	  header("Location: registros.php?success=Criado com sucesso");
        }else {
-          header("Location: ../index.php?error=unknown error occurred&$user_data");
+          header("Location: ../index.php?error=Ocorreu um erro desconhecido&$user_data");
        }
 	}
 

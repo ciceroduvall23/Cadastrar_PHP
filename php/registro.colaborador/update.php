@@ -44,17 +44,17 @@ if (isset($_GET['id'])) {
         }else if (empty($email)) {
 		header("Location: ../update.php?id=$id&error=E-mail é Obrigatório");
         }else if (empty($nascimento)) {
-		header("Location: ../update.php?id=$id");
+		header("Location: ../update.php?id=$id&error=Data de nascimento é Obrigatória");
 	}else {
 
        $sql = "UPDATE users
-               SET name='$name', email='$email'
+               SET name='$name', telefone='$telefone',  email='$email',  nascimento='$nascimento'
                WHERE id=$id ";
        $result = mysqli_query($conn, $sql);
        if ($result) {
-       	  header("Location: registros.php?success=successfully updated");
+       	  header("Location: registros.php?success=Atualização bem sucedida");
        }else {
-          header("Location: update.php?id=$id&error=unknown error occurred&$user_data");
+          header("Location: update.php?id=$id&error=Erro desconhecido&$user_data");
        }
 	}
 }else {

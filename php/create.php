@@ -37,9 +37,9 @@ if (isset($_POST['create'])) {
                VALUES('$endereco', '$email', '$cnpj', '$telefone', '$razaosocial', 'nascimento')";
        $result = mysqli_query($conn, $sql);
        if ($result) {
-       	  header("Location: ../read.php?success=successfully created");
+       	  header("Location: ../read.php?success=criado com sucesso");
        }else {
-          header("Location: ../index.php?error=unknown error occurred&$user_data");
+          header("Location: ../index.php?error=Ocorreu um erro desconhecido&$user_data");
        }
 	}
 
