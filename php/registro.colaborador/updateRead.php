@@ -1,4 +1,4 @@
-<?php include 'php/update.php'; ?>
+<?php include 'update.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="php/update.php" style="background-color:white;"
+		<form action="update.php" style="background-color:white;"
 		      method="post">
             
 		   <h4 class="display-4 text-center">Atualizar dados</h4><hr><br>
@@ -20,21 +20,12 @@
 		    </div>
 		   <?php } ?>
 		   <div class="form-group">
-		     <label for="razaosocial">Razão Social</label>
+		     <label for="name">Nome Completo</label>
 		     <input type="name" 
 		           class="form-control" 
-		           id="razaosocial" 
-		           name="razaosocial" 
-		           value="<?=$row['razaosocial'] ?>" >
-		   </div>
-
-		   <div class="form-group">
-		     <label for="cnpj">CNPJ</label>
-		     <input type="number" 
-		           class="form-control" 
-		           id="cnpj" 
-		           name="cnpj" 
-		           value="<?=$row['cnpj'] ?>" >
+		           id="name" 
+		           name="name" 
+		           value="<?=$row['name'] ?>" >
 		   </div>
 
 		   <div class="form-group">
@@ -56,13 +47,15 @@
 		   </div>
 
 		   <div class="form-group">
-		     <label for="endereco">Endereco</label>
-		     <input type="text" 
+		     <label for="nascimento">Nascimento</label>
+		     <input type="date" 
 		           class="form-control" 
-		           id="endereco" 
-		           name="endereco" 
-		           value="<?=$row['endereco'] ?>" >
+		           id="nascimento" 
+		           name="nascimento" 
+		           value="<?=$row['nascimento'] ?>" >
 		   </div>
+
+		 
 		   <input type="text" 
 		          name="id"
 		          value="<?=$row['id']?>"
@@ -71,7 +64,7 @@
 		   <button type="submit" 
 		           class="btn btn-primary"
 		           name="update">Atualizar</button>
-		    <a href="read.php" class="link-primary">Ver registros</a>
+		    <a href="registros.php" class="link-primary">Ver registros</a>
 	    </form>
 	</div>
 </body>

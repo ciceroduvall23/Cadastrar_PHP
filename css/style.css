@@ -1,16 +1,11 @@
-body{
-	margin: 0;
-	padding: 0;
-	color: #585858;
-	background-color: black;
-}
+
 .container {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: black;
+	background: white;
 }
 
 .container form {
@@ -18,10 +13,17 @@ body{
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: relative;
+    right: 30%;
 	
 }
+.form-group
+{
+	background: white;
+
+}
 .box {
-	width: 750px;
+	width: 100%;
 }
 .container table {
 	padding: 20px;

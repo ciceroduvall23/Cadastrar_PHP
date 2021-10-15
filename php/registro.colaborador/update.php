@@ -18,7 +18,7 @@ if (isset($_GET['id'])) {
     if (mysqli_num_rows($result) > 0) {
     	$row = mysqli_fetch_assoc($result);
     }else {
-    	header("Location: read.php");
+    	header("Location: registros.php");
     }
 
 
@@ -38,9 +38,13 @@ if (isset($_GET['id'])) {
 	$id = validate($_POST['id']);
 
 	if (empty($name)) {
-		header("Location: ../update.php?id=$id&error=Name is required");
-	}else if (empty($email)) {
-		header("Location: ../update.php?id=$id&error=Email is required");
+		header("Location: ../update.php?id=$id&error= Nome é Obrigatório");
+	}else if (empty($telefone)) {
+		header("Location: ../update.php?id=$id&error=Telefone é Obrigatório");
+        }else if (empty($email)) {
+		header("Location: ../update.php?id=$id&error=E-mail é Obrigatório");
+        }else if (empty($nascimento)) {
+		header("Location: ../update.php?id=$id");
 	}else {
 
        $sql = "UPDATE users
@@ -48,11 +52,11 @@ if (isset($_GET['id'])) {
                WHERE id=$id ";
        $result = mysqli_query($conn, $sql);
        if ($result) {
-       	  header("Location: ../read.php?success=successfully updated");
+       	  header("Location: registros.php?success=successfully updated");
        }else {
-          header("Location: ../update.php?id=$id&error=unknown error occurred&$user_data");
+          header("Location: update.php?id=$id&error=unknown error occurred&$user_data");
        }
 	}
 }else {
-	header("Location: read.php");
+	header("Location: registros.php");
 }

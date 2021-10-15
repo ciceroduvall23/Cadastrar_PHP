@@ -5,10 +5,11 @@
 	<title>Create</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div class="container">
-		<div class="box">
+		<div class="box" style="background-color:white;width:100%;">
 			<h4 class="display-4 text-center">Empresas Cadastradas</h4><br>
 			<?php if (isset($_GET['success'])) { ?>
 		    <div class="alert alert-success" role="alert">
@@ -20,9 +21,11 @@
 			  <thead>
 			    <tr>
 			      <th scope="col">#</th>
-			      <th scope="col">Name</th>
-			      <th scope="col">Email</th>
-			      <th scope="col">Action</th>
+			      <th scope="col">Razão Social</th>
+			      <th scope="col">CNPJ</th>
+			      <th scope="col">Telefone</th>
+				  <th scope="col">Endereço</th>
+			   
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -33,8 +36,11 @@
 			  	 ?>
 			    <tr>
 			      <th scope="row"><?=$i?></th>
-			      <td><?=$rows['name']?></td>
-			      <td><?php echo $rows['email']; ?></td>
+			      <td><?=$rows['razaosocial']?></td>
+			      <td><?php echo $rows['cnpj']; ?></td>
+				  <td><?php echo $rows['telefone']; ?></td>
+				  <td><?php echo $rows['email']; ?></td>
+
 			      <td><a href="update.php?id=<?=$rows['id']?>" 
 			      	     class="btn btn-success">Atualizar</a>
 
@@ -47,7 +53,7 @@
 			</table>
 			<?php } ?>
 			<div class="link-right">
-				<a href="index.php" class="link-primary">Create</a>
+				<a href="index.php" class="link-primary">Cadastrar</a>
 			</div>
 		</div>
 	</div>
